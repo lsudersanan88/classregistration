@@ -1,13 +1,12 @@
-package com.lakshmi.classregistration.model;
+package com.lakshmi.classregistration.entity;
 
 import lombok.Data;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 
 @Data
 @Entity
-public class AddStudent {
+public class AddStudentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,19 +15,19 @@ public class AddStudent {
 
     @ManyToOne
     @JoinColumn(name = "courseId", referencedColumnName = "courseId")
-    private Courses courses;
+    private CoursesEntity courses;
 
     @ManyToOne
     @JoinColumn(name = "majorId", referencedColumnName = "majorId")
-    private Majors majors;
+    private MajorsEntity majors;
 /*
     @ManyToOne
     @JoinColumn(name = "classId", referencedColumnName = "classId", insert="false", update="false")
-    private Classes classes;*/
+    private ClassesEntityDto classes;*/
 
     @ManyToOne
     @JoinColumn(name = "redId", referencedColumnName = "redId")
-    private Student student;
+    private StudentEntity student;
 
 
 }

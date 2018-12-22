@@ -1,4 +1,4 @@
-package com.lakshmi.classregistration.model;
+package com.lakshmi.classregistration.entity;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-public class Majors {
+public class MajorsEntity {
 
  @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

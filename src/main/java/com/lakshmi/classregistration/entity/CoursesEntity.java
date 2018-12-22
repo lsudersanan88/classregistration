@@ -1,4 +1,4 @@
-package com.lakshmi.classregistration.model;
+package com.lakshmi.classregistration.entity;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-public class Courses {
+public class CoursesEntity {
 
    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,7 +16,7 @@ public class Courses {
 
     @ManyToOne
     @JoinColumn(name = "majorId", referencedColumnName = "majorId")
-    private Majors majors;
+    private MajorsEntity majors;
 
     @Column (name ="level",unique = true)
     private String level;
