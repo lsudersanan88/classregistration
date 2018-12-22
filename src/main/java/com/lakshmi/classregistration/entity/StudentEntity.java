@@ -9,17 +9,23 @@ import javax.persistence.*;
 @Table(name = "student")
 public class StudentEntity
 {
-@Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name ="studentId",unique = true)
     private Integer studentId;
-    @Column (name ="redId",unique = true)
+
+    @Column (name ="redId",unique = true,nullable = false)
     private Integer redId;
+
     @Column (name ="firstName")
     private  String firstName;
+
     @Column (name ="lastName")
     private String lastName;
+
     @Column (name ="email",unique = true)
     private String email;
+
     @Column (name ="password",unique = true)
     private String password;
 

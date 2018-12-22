@@ -11,5 +11,25 @@ CREATE TABLE `student` (
   `firstName` varchar(255) DEFAULT NULL,
   `lastName` varchar(255) DEFAULT NULL,
  `email` varchar(255) DEFAULT NULL unique,
+ `password` varchar(255) DEFAULT NULL unique,
   PRIMARY KEY (`studentId`)
-)
+);
+
+
+
+DROP TABLE student ;
+
+
+## Rest endpoints
+1. http://localhost:8083/registration/getstudents
+2. http://localhost:8083/registration/getstudentbyid/1
+3. http://localhost:8083/registration/deletestudentbyid/5
+
+http://localhost:8083/registration/addstudent
+{
+	"redId":819890560,
+   "firstName":"lakshmiprabha",
+   "lastName":"Sudersanan",
+   "email":"lakshmi.prabha88@gmail.com",
+   "password":"dncdchhcm"
+}
