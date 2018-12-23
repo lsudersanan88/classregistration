@@ -24,8 +24,9 @@ DROP TABLE student ;
 1. http://localhost:8083/registration/getstudents
 2. http://localhost:8083/registration/getstudentbyid/1
 3. http://localhost:8083/registration/deletestudentbyid/5
-
-http://localhost:8083/registration/addstudent
+4. http://localhost:8083/registration/updatestudent/4
+5. 
+6. http://localhost:8083/registration/addstudent
 {
 	"redId":819890560,
    "firstName":"lakshmiprabha",

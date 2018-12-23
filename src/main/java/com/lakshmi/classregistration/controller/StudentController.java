@@ -58,17 +58,42 @@ public class StudentController {
     }
 
     @DeleteMapping("/deletestudentbyid/{studentId}")
-    public String deleteStudentById(@PathVariable("studentId") Integer studentId)
+    public ResponseEntity deleteStudentById(@PathVariable(value = "studentId", required = true) Integer studentId)
     {
-        if(studentId!= null)
+        if( studentService.getStudentById(studentId)!= null )
         {
-        studentService.deleteStudentById(studentId);
-            return "Student is deleted";
+            studentService.deleteStudentById(studentId);
+            return new ResponseEntity( HttpStatus.NO_CONTENT);
         }
-        return "Not deleted";
+        return new ResponseEntity("No data found", HttpStatus.NOT_FOUND);
     }
 
+    @PutMapping("/updatestudent/{studentId}")
+    public ResponseEntity updateStudent(@RequestBody StudentDto studentDto,
+                                        @PathVariable("studentId") Integer studentId)
 
+    {
+        if( studentService.getStudentById(studentId)!= null )
+        {
+            StudentDto updatedStudent =   studentService.updateStudent(studentDto,studentId);
+            return new ResponseEntity(updatedStudent, HttpStatus.CREATED);
+        }
 
+        return new ResponseEntity("not found", HttpStatus.NOT_FOUND);
+    }
+
+    @PatchMapping("/editstudent/{studentId}")
+    public ResponseEntity editStudent(@RequestBody StudentDto studentDto,
+                                        @PathVariable("studentId") Integer studentId)
+
+    {
+        if( studentService.getStudentById(studentId)!= null )
+        {
+            StudentDto updatedStudent =   studentService.editStudent(studentDto,studentId);
+            return new ResponseEntity(updatedStudent, HttpStatus.CREATED);
+        }
+
+        return new ResponseEntity("not found", HttpStatus.NOT_FOUND);
+    }
 
 }
