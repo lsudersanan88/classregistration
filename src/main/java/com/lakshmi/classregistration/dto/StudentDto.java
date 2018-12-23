@@ -1,12 +1,5 @@
 package com.lakshmi.classregistration.dto;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
-@Data
-@Getter
-@Setter
 public class StudentDto {
     private Integer studentId;
     private Integer redId;
@@ -62,4 +55,6 @@ public class StudentDto {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
 }

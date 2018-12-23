@@ -1,10 +1,7 @@
 package com.lakshmi.classregistration.entity;
 
-import lombok.Data;
-
 import javax.persistence.*;
 
-@Data
 @Entity
 public class MajorsEntity {
 

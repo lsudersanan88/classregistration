@@ -1,12 +1,7 @@
 package com.lakshmi.classregistration.entity;
-
-import lombok.Data;
-
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-
-@Data
 @Entity
 public class ClassesEntity {
 

@@ -1,10 +1,6 @@
 package com.lakshmi.classregistration.entity;
 
-import lombok.Data;
-
 import javax.persistence.*;
-
-@Data
 @Entity
 @Table(name = "student")
 public class StudentEntity

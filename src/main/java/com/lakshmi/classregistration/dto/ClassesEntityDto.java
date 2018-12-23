@@ -1,10 +1,8 @@
 package com.lakshmi.classregistration.dto;
 
-import lombok.Data;
 
 import java.sql.Timestamp;
 
-@Data
 public class ClassesEntityDto {
 
     private Integer classId;

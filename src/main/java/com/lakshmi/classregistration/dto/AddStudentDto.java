@@ -1,8 +1,5 @@
 package com.lakshmi.classregistration.dto;
 
-import lombok.Data;
-
-@Data
 public class AddStudentDto {
 
     private Integer addStudentId;

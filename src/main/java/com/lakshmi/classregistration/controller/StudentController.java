@@ -89,7 +89,7 @@ public class StudentController {
     {
         if( studentService.getStudentById(studentId)!= null )
         {
-            StudentDto updatedStudent =   studentService.editStudent(studentDto,studentId);
+            StudentDto updatedStudent =  studentService.editStudent(studentDto,studentId);
             return new ResponseEntity(updatedStudent, HttpStatus.CREATED);
         }
 
